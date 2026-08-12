@@ -4,11 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Aw'Aw — Bio & Links</title>
+  <meta name="description" content="Aw'Aw — a simple, colorful single-page profile and link hub." />
+  <meta name="keywords" content="Aw'Aw, bio, links, mural, Windsor, profile" />
+  <link rel="canonical" href="https://awpawlogin.github.io/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Aw'Aw — Bio & Links" />
+  <meta property="og:description" content="Aw'Aw — a simple, colorful single-page profile and link hub." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://awpawlogin.github.io/" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/awpawlogin/awpawlogin.github.io/main/images/mural.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aw'Aw — Bio & Links" />
+  <meta name="twitter:description" content="Aw'Aw — a simple, colorful single-page profile and link hub." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/awpawlogin/awpawlogin.github.io/main/images/mural.webp" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Libre+Franklin:wght@300;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/images/favicon.svg">
+
   <link rel="stylesheet" href="/css/styles.css">
-  <meta name="description" content="Aw'Aw — Single page bio and links." />
 </head>
 <body>
   <header class="topbar">
@@ -17,7 +35,7 @@
       <nav class="nav">
         <a href="#links">Links</a>
         <a href="#bio">Bio</a>
-        <a href="#contact">Contact</a>
+        <a href="#help">Help Making Changes</a>
       </nav>
     </div>
   </header>
@@ -50,13 +68,13 @@
           <ul>
             <li><a class="link-btn" href="https://github.com/awpawlogin" target="_blank" rel="noopener">GitHub</a></li>
             <li><a class="link-btn" href="#" title="Replace with your portfolio or homepage">Portfolio</a></li>
-            <li><a class="link-btn" href="#contact">Contact</a></li>
+            <li><a class="link-btn" href="mailto:awpawlogin@gmail.com">Email</a></li>
           </ul>
         </div>
 
-        <div id="contact" class="contact">
-          <h4>Contact</h4>
-          <p>If you'd like to update links or this bio, edit <code>index.html</code> in this repository.</p>
+        <div id="help" class="contact">
+          <h4>Help Making Changes</h4>
+          <p>If you'd like to update links or this bio, you can email <a href="mailto:awpawlogin@gmail.com">awpawlogin@gmail.com</a> and I will help make changes. You can also edit <code>index.html</code> in this repository directly if you have access.</p>
         </div>
       </aside>
     </div>
@@ -65,6 +83,18 @@
   <footer class="sitefoot">
     <div class="container">© Aw'Aw — Built with a mural palette • Hosted on GitHub Pages</div>
   </footer>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Aw'Aw",
+    "email": "mailto:awpawlogin@gmail.com",
+    "url": "https://awpawlogin.github.io/",
+    "description": "Aw'Aw — a simple, colorful single-page profile and link hub."
+  }
+  </script>
 
   <script type="text/javascript">
     function googleTranslateElementInit() {

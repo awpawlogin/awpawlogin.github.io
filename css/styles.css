@@ -1,4 +1,4 @@
-:root{
+... :root{
   --cream: #F4EADf;
   --muted-teal: #7EA9A0;
   --deep-blue: #2E5056;
@@ -92,3 +92,31 @@ body{
 /* translate widget placement */
 .translate-wrap{position:fixed;right:18px;bottom:18px;z-index:120;box-shadow:0 6px 18px rgba(46,80,86,0.08);border-radius:10px;background:rgba(255,255,255,0.92);padding:8px}
 @media (max-width:700px){.translate-wrap{right:8px;left:8px;bottom:auto;top:84px;width:auto}}
+
+/* Windsor inset image inside the mural */
+.windsor-inset{
+  position:absolute;
+  right:22%;
+  top:10%;
+  width:420px;
+  height:120px;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
+  border:2px solid rgba(255,255,255,0.06);
+  background:#f3f3f3;  
+  z-index:2;
+}
+.windsor-inset-img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+@media (max-width:900px){
+  .windsor-inset{ right:18%; top:11%; width:360px; height:100px; }
+}
+@media (max-width:600px){
+  .windsor-inset{ right:12%; top:12%; width:280px; height:84px; }
+}

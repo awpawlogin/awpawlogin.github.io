@@ -1,0 +1,94 @@
+:root{
+  --cream: #F4EADf;
+  --muted-teal: #7EA9A0;
+  --deep-blue: #2E5056;
+  --brick: #C86B48;
+  --rust: #D87B4A;
+  --mustard: #E6B25A;
+  --soft-green: #88A79A;
+  --text: #243235;
+  --muted: #6C7B78;
+  --glass: rgba(255,255,255,0.06);
+  --radius: 12px;
+  font-synthesis: none;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--cream) 0%, #EFF5F2 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* page layout */
+.container{max-width:1100px;margin:0 auto;padding:28px}
+.topbar{background:linear-gradient(90deg,var(--muted-teal),#9dbbb4);box-shadow:0 4px 18px rgba(0,0,0,0.06)}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;padding:16px 28px}
+.brand{font-family: "Montserrat", sans-serif;font-weight:700;color:var(--deep-blue);margin:0;font-size:1.4rem;letter-spacing:0.02em}
+.nav a{color:var(--deep-blue);text-decoration:none;margin-left:18px;font-weight:600}
+.nav a:hover{text-decoration:underline}
+
+/* hero grid */
+.hero{padding:36px 0}
+.grid{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
+@media (max-width:900px){.grid{grid-template-columns:1fr;}.right{order:2}}
+
+/* left column mural + intro */
+.left .mural{
+  height:320px;border-radius:var(--radius);overflow:hidden;
+  background:
+    linear-gradient(180deg, rgba(46,80,86,0.06), rgba(200,107,72,0.02)),
+    radial-gradient(800px 200px at 10% 10%, rgba(230,178,90,0.12), transparent 15%),
+    linear-gradient(180deg,#e8f2ef 0%, #eaf3f1 100%);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+  box-shadow:0 8px 30px rgba(46,80,86,0.08);
+  border:1px solid rgba(46,80,86,0.04);
+}
+.mural::before{
+  content:"WINDSOR";position:absolute;left:16px;top:14px;
+  font-weight:800;font-family:"Montserrat",sans-serif;color:rgba(46,80,86,0.12);font-size:72px;letter-spacing:0.08em;transform:skewX(-8deg);
+  text-shadow: 3px 2px 0 rgba(255,255,255,0.32);
+  pointer-events:none;
+}
+.subtitle{margin:18px 0 6px;color:var(--deep-blue);font-weight:700;font-family:"Montserrat",sans-serif}
+.lead{color:var(--muted);max-width:46ch}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn.primary{background:linear-gradient(180deg,var(--rust),var(--brick));color:white;box-shadow:0 6px 18px rgba(200,107,72,0.18)}
+
+/* right column bio/links card */
+.bio-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  padding:18px;border-radius:10px;border:1px solid rgba(46,80,86,0.04);
+  box-shadow:0 8px 18px rgba(46,80,86,0.04);
+}
+.bio-title{margin:0 0 8px;font-family:"Montserrat",sans-serif;color:var(--deep-blue)}
+.bio-text{margin:0 0 12px;padding:6px 0;color:var(--text);font-size:0.99rem}
+.meta{font-size:0.85rem;color:var(--muted)}
+
+/* links list */
+.links{margin-top:18px}
+.links h4{margin:8px 0 10px;color:var(--deep-blue)}
+.links ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.link-btn{
+  display:block;padding:10px;border-radius:10px;background:linear-gradient(180deg,var(--cream),#fff);
+  border:1px solid rgba(46,80,86,0.06);text-decoration:none;color:var(--deep-blue);font-weight:600;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.link-btn:hover{transform:translateY(-4px);box-shadow:0 10px 22px rgba(46,80,86,0.08)}
+
+/* contact */
+.contact{margin-top:18px;padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(126,169,160,0.04), rgba(200,107,72,0.02));border:1px solid rgba(46,80,86,0.02)}
+.contact code{background:var(--glass);padding:4px 8px;border-radius:6px;color:var(--deep-blue)}
+
+/* footer */
+.sitefoot{padding:18px 0;color:var(--muted);font-size:0.9rem;text-align:center;margin-top:28px}
+
+/* translate widget placement */
+.translate-wrap{position:fixed;right:18px;bottom:18px;z-index:120;box-shadow:0 6px 18px rgba(46,80,86,0.08);border-radius:10px;background:rgba(255,255,255,0.92);padding:8px}
+@media (max-width:700px){.translate-wrap{right:8px;left:8px;bottom:auto;top:84px;width:auto}}
